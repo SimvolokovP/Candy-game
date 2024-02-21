@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Eat the candy</title>
+  </head>
+  <body>
+    <div class="screen visible">
+      <h2>Собери как можно больше конфет за 15 секунд!</h2>
+      <div class="stats">
+        <span id="current"></span>
+        <span id="record"></span>
+      </div>
+      <button type="button" class="btn" id="start-btn" onclick="play(this)">Начать игру</button>
+    </div>
+
+    <div class="screen">
+      <h2>Выбери любимую вкусняшку</h2>
+      <ul class="sweets-list">
+        <li>
+          <button id="donut" type="button" class="choose-sweet-btn" onclick="chooseSweet(this)">
+            <p>Пончик</p>
+            <img src="img/donut.png" alt="donut" />
+          </button>
+        </li>
+        <li>
+          <button id="cupcake" type="button" class="choose-sweet-btn" onclick="chooseSweet(this)">
+            <p>Кекс</p>
+            <img src="img/cupcake.png" alt="cupcake" />
+          </button>
+        </li>
+        <li>
+          <button id="cake" type="button" class="choose-sweet-btn" onclick="chooseSweet(this)">
+            <p>Торт</p>
+            <img src="img/cake-slice.png" alt="cake-slice" />
+          </button>
+        </li>
+        <li>
+          <button id="candy" type="button" class="choose-sweet-btn" onclick="chooseSweet(this)">
+            <p>Макс</p>
+            <img src="img/max.png" alt="Max" />
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="screen game-container" id="game-container">
+      <h3 id="time" class="time">Время: 00</h3>
+      <h3 id="score" class="score">Счет: 0</h3>
+      <div class="message" id="message">
+        Все
+        <button class="btn" id="again" onclick="playAgain(this)">Еще</button>
+      </div>
+    </div>
+
+    <audio id="bite" src="audio/bite.mp3"></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
